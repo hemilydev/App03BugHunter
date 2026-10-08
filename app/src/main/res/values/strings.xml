@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Bug Hunter</string>
+
+    <!-- Cabeçalho -->
+    <string name="titulo_app">&gt; BUG_HUNTER</string>
+    <string name="subtitulo_app">Central de Bugs · caçada em andamento</string>
+
+    <!-- Formulário -->
+    <string name="hint_titulo">Título do problema</string>
+    <string name="hint_modulo">Módulo ou tela (ex.: Login)</string>
+    <string name="hint_descricao">Descrição do erro (mín. 10 caracteres)</string>
+    <string name="label_gravidade">Gravidade</string>
+    <string name="valor_gravidade">%1$d · %2$s</string>
+    <string name="btn_registrar">Registrar bug</string>
+
+    <!-- Validação -->
+    <string name="erro_titulo">Informe o título do problema</string>
+    <string name="erro_modulo">Informe o módulo ou a tela</string>
+    <string name="erro_descricao">Descreva o erro com pelo menos 10 caracteres</string>
+
+    <!-- Níveis de gravidade -->
+    <string name="nivel_baixa">Baixa</string>
+    <string name="nivel_media">Média</string>
+    <string name="nivel_alta">Alta</string>
+    <string name="nivel_critica">Crítica</string>
+
+    <!-- Painel -->
+    <string name="label_total">Total</string>
+    <string name="label_abertos">Abertos</string>
+    <string name="label_corrigidos">Corrigidos</string>
+    <string name="label_pontos">Pontos</string>
+    <string name="valor_zero">0</string>
+
+    <!-- Lista -->
+    <string name="dica_lista">Toque: corrigir/reabrir · Toque longo: excluir</string>
+    <string name="lista_vazia">Nenhum bug registrado. O sistema parece perfeito... por enquanto!</string>
+
+    <!-- Cartão -->
+    <string name="desc_icone_bug">Ícone que indica a gravidade do bug</string>
+    <string name="formato_codigo">BUG-%1$03d</string>
+    <string name="formato_modulo">Módulo: %1$s</string>
+    <string name="formato_gravidade">Gravidade %1$d · %2$s</string>
+    <string name="status_aberto">ABERTO</string>
+    <string name="status_corrigido">CORRIGIDO</string>
+
+    <!-- Mensagens -->
+    <string name="msg_registrado">%1$s capturado! A caçada continua.</string>
+    <string name="msg_removido">%1$s removido da central.</string>
+</resources>

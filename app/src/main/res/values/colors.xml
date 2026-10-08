@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="fundo_terminal">#FF0B0F0C</color>
+    <color name="fundo_card">#FF16201A</color>
+    <color name="fundo_card_corrigido">#FF0F1411</color>
+    <color name="verde_neon">#FF39FF14</color>
+    <color name="texto_claro">#FFE6EDE8</color>
+    <color name="texto_secundario">#FF8A9A8F</color>
+    <color name="gravidade_baixa">#FF4CAF50</color>
+    <color name="gravidade_media">#FFFFC107</color>
+    <color name="gravidade_alta">#FFF44336</color>
+    <color name="status_aberto">#FFFF9800</color>
+    <color name="status_corrigido">#FF39FF14</color>
+</resources>

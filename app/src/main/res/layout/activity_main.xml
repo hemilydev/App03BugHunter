@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo_terminal"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="8dp"
+    tools:context=".MainActivity">
+
+    <!-- ===== Cabeçalho ===== -->
+    <TextView
+        android:id="@+id/textTituloApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/titulo_app"
+        android:textColor="@color/verde_neon"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/subtitulo_app"
+        android:textColor="@color/texto_secundario"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTituloApp" />
+
+    <!-- ===== Formulário ===== -->
+    <EditText
+        android:id="@+id/editTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/verde_neon"
+        android:hint="@string/hint_titulo"
+        android:inputType="textCapSentences"
+        android:maxLength="40"
+        android:minHeight="48dp"
+        android:textColor="@color/texto_claro"
+        android:textColorHint="@color/texto_secundario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSubtitulo" />
+
+    <EditText
+        android:id="@+id/editModulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/verde_neon"
+        android:hint="@string/hint_modulo"
+        android:inputType="textCapWords"
+        android:maxLength="30"
+        android:minHeight="48dp"
+        android:textColor="@color/texto_claro"
+        android:textColorHint="@color/texto_secundario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTitulo" />
+
+    <EditText
+        android:id="@+id/editDescricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/verde_neon"
+        android:hint="@string/hint_descricao"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLines="3"
+        android:minHeight="48dp"
+        android:textColor="@color/texto_claro"
+        android:textColorHint="@color/texto_secundario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editModulo" />
+
+    <TextView
+        android:id="@+id/textLabelGravidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_gravidade"
+        android:textColor="@color/texto_secundario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDescricao" />
+
+    <TextView
+        android:id="@+id/textValorGravidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:textColor="@color/verde_neon"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textLabelGravidade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textLabelGravidade"
+        tools:text="1 · Baixa" />
+
+    <SeekBar
+        android:id="@+id/seekGravidade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:max="5"
+        android:min="1"
+        android:progress="1"
+        android:progressTint="@color/verde_neon"
+        android:thumbTint="@color/verde_neon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelGravidade" />
+
+    <Button
+        android:id="@+id/buttonRegistrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/verde_neon"
+        android:fontFamily="monospace"
+        android:text="@string/btn_registrar"
+        android:textColor="@color/fundo_terminal"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekGravidade" />
+
+    <!-- ===== Painel ===== -->
+    <LinearLayout
+        android:id="@+id/layoutPainel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/fundo_card"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegistrar">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@string/valor_zero"
+                android:textColor="@color/texto_claro"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textLabelTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_total"
+                android:textColor="@color/texto_secundario"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textAbertos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@string/valor_zero"
+                android:textColor="@color/status_aberto"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textLabelAbertos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_abertos"
+                android:textColor="@color/texto_secundario"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textCorrigidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@string/valor_zero"
+                android:textColor="@color/status_corrigido"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textLabelCorrigidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_corrigidos"
+                android:textColor="@color/texto_secundario"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textPontos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@string/valor_zero"
+                android:textColor="@color/verde_neon"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textLabelPontos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_pontos"
+                android:textColor="@color/texto_secundario"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textDica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/dica_lista"
+        android:textColor="@color/texto_secundario"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutPainel" />
+
+    <!-- ===== Lista ===== -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerBugs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDica" />
+
+    <TextView
+        android:id="@+id/textListaVazia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:fontFamily="monospace"
+        android:text="@string/lista_vazia"
+        android:textAlignment="center"
+        android:textColor="@color/texto_secundario"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerBugs"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerBugs"
+        app:layout_constraintStart_toStartOf="@+id/recyclerBugs"
+        app:layout_constraintTop_toTopOf="@+id/recyclerBugs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
